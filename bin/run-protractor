@@ -20,9 +20,9 @@ if nc -z localhost 4444; then
   # run protractor tests
   mkdir -p target
   if [ -n "$BASEURL" ]; then
-    protractor --baseUrl=$BASEURL
+    npm run e2e-tests --baseUrl=$BASEURL
   else
-    protractor
+    npm run e2e-tests
   fi
 
 
